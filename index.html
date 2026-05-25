@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Grzegorza Sikorskiego - Full Stack Developer. Zobacz moje projekty, certyfikaty, szkolenia oraz skontaktuj się ze mną.">
+    <meta name="keywords" content="Grzegorz Sikorski, portfolio, full stack developer, programista, HTML, CSS, JS, projekty, certyfikaty, szkolenia">
+    <meta name="author" content="Grzegorz Sikorski">
+    <title>Grzegorz Sikorski | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Devicon Icons (Tech Icon Set) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- FA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Efektowne tło cząsteczkowe / gradientowe -->
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <!-- Pasek Nawigacji (Sticky Nav) -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <span class="logo-accent">&lt;</span>GS<span class="logo-accent"> /&gt;</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#o-mnie" class="nav-link">O mnie</a></li>
+                    <li><a href="#projekty" class="nav-link">Projekty</a></li>
+                    <li><a href="#certyfikaty" class="nav-link">Certyfikaty &amp; Szkolenia</a></li>
+                    <li><a href="#zainteresowania" class="nav-link">Zainteresowania</a></li>
+                    <li><a href="#kontakt" class="nav-link nav-btn">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger-menu" aria-label="Otwórz menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sekcja Hero -->
+    <section class="hero-section" id="hero">
+        <div class="hero-container">
+            <div class="hero-content fade-in-up">
+                <h1 class="hero-title">
+                    Cześć, jestem <span class="text-gradient">Grzegorz Sikorski</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    Jestem <span id="typing-text"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    Tworzę nowoczesne, wysoce interaktywne i wydajne aplikacje internetowe. Skupiam się na czystym kodzie, świetnej estetyce oraz dostarczaniu realnej wartości biznesowej.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projekty" class="btn btn-primary">Zobacz Projekty</a>
+                    <a href="#kontakt" class="btn btn-secondary">Porozmawiajmy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Sekcja O Mnie -->
+        <section class="section o-mnie-section" id="o-mnie">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">O mnie</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info scroll-reveal">
+                        <h3>Kim jestem i czym się zajmuję?</h3>
+                        <p>
+                            Moja przygoda z programowaniem zaczęła się od fascynacji tworzeniem rzeczy z niczego. Dziś projektuję i koduję aplikacje, które ułatwiają codzienne życie użytkownikom. Stawiam na ciągły rozwój, dlatego regularnie biorę udział w szkoleniach i zdobywam nowe certyfikaty.
+                        </p>
+                        <p>
+                            Dbam nie tylko o warstwę wizualną, ale też o solidne fundamenty architektury, optymalizację baz danych oraz bezproblemowe wdrożenia chmurowe. Moim nadrzędnym celem jest tworzenie produktów, które zachwycają interfejsem i działają niezawodnie pod obciążeniem.
+                        </p>
+                    </div>
+                    
+                    <div class="about-skills scroll-reveal">
+                        <h3>Moje Umiejętności</h3>
+                        <div class="skills-tabs">
+                            <button class="skill-tab active" onclick="switchTab(event, 'frontend-web')">Frontend &amp; Web</button>
+                            <button class="skill-tab" onclick="switchTab(event, 'backend-api')">Backend &amp; API</button>
+                            <button class="skill-tab" onclick="switchTab(event, 'mobile-gamedev')">Mobile &amp; Gamedev</button>
+                        </div>
+                        
+                        <!-- TAB: Frontend & Web -->
+                        <div id="frontend-web" class="tab-content active">
+                            <div class="skills-chips-grid">
+                                <div class="skill-chip html">
+                                    <i class="devicon-html5-plain"></i>
+                                    <span>HTML</span>
+                                </div>
+                                <div class="skill-chip css">
+                                    <i class="devicon-css3-plain"></i>
+                                    <span>CSS</span>
+                                </div>
+                                <div class="skill-chip javascript">
+                                    <i class="devicon-javascript-plain"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-chip typescript">
+                                    <i class="devicon-typescript-plain"></i>
+                                    <span>TypeScript</span>
+                                </div>
+                                <div class="skill-chip angular">
+                                    <i class="devicon-angularjs-plain"></i>
+                                    <span>Angular</span>
+                                </div>
+                                <div class="skill-chip webgl">
+                                    <i class="devicon-opengl-plain"></i>
+                                    <span>WebGL</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- TAB: Backend & API -->
+                        <div id="backend-api" class="tab-content">
+                            <div class="skills-chips-grid">
+                                <div class="skill-chip python">
+                                    <i class="devicon-python-plain"></i>
+                                    <span>Python</span>
+                                </div>
+                                <div class="skill-chip nodejs">
+                                    <i class="devicon-nodejs-plain"></i>
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="skill-chip bun">
+                                    <i class="devicon-bun-plain"></i>
+                                    <span>Bun</span>
+                                </div>
+                                <div class="skill-chip mysql">
+                                    <i class="devicon-mysql-original"></i>
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="skill-chip xampp">
+                                    <span>XAMPP</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- TAB: Mobile & Gamedev -->
+                        <div id="mobile-gamedev" class="tab-content">
+                            <div class="skills-chips-grid">
+                                <div class="skill-chip cpp">
+                                    <i class="devicon-cplusplus-plain"></i>
+                                    <span>C++</span>
+                                </div>
+                                <div class="skill-chip c-lang">
+                                    <i class="devicon-c-original"></i>
+                                    <span>C</span>
+                                </div>
+                                <div class="skill-chip flutter">
+                                    <i class="devicon-flutter-plain"></i>
+                                    <span>Flutter</span>
+                                </div>
+                                <div class="skill-chip dart">
+                                    <i class="devicon-dart-plain"></i>
+                                    <span>Dart</span>
+                                </div>
+                                <div class="skill-chip godot">
+                                    <i class="devicon-godot-plain"></i>
+                                    <span>Godot 4</span>
+                                </div>
+                                <div class="skill-chip maui">
+                                    <i class="devicon-dot-net-plain"></i>
+                                    <span>MAUI</span>
+                                </div>
+                                <div class="skill-chip opengl">
+                                    <i class="devicon-opengl-plain"></i>
+                                    <span>OpenGL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Projekty -->
+        <section class="section projekty-section" id="projekty">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">Moje Projekty</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card featured scroll-reveal" id="project-template">
+                        <div class="project-img-container">
+                            <img src="./assets/aas.png">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Godot 4</span>
+                                <span class="tag">GDScript</span>
+                            </div>
+                            <h3 class="project-card-title">All About Safety</h3>
+                            <p class="project-card-desc">
+                                Jest to symulator dyspozytorni 112 napędzany narracją oraz dynamicznymi wydarzeniami.
+                                Twoim zadaniem jest ratowanie ludzi, podejmowanie ciężkich i szybkich wyborów.
+                            </p>
+                            
+                            <h4 class="project-features-title">Główne funkcjonalności:</h4>
+                            <ul class="project-features-list">
+                                <li>System scenariuszy z interaktywnymi systemami dialogów</li>
+                                <li>Rozbudowana fabuła oraz wiele zakończeń</li>
+                                <li>Wysyłanie służb ratunkowych oraz alertów</li>
+                                <li>System trójfazowy zmieniający oprawę audiowizualną w oparciu o sytuację gracza</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="project-card scroll-reveal">
+                        <div class="project-img-container">
+                            <img src="./assets/chronossos1.png">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Dart</span>
+                            </div>
+                            <h3 class="project-card-title">Chronossos (wcześniej Consilium)</h3>
+                            <p class="project-card-desc">
+                                Aplikacja mobilna polegająca na śledzeniu swoich nawyków, a także wspierająca użytkownika w wykonywaniu i planowaniu różnego rodzaju zadań.
+                            </p>
+                            <h4 class="project-features-title">Główne funkcjonalności:</h4>
+                            <ul class="project-features-list">
+                                <li>Kompleksowe ustawianie nowych zadań</li>
+                                <li>Whiteboard oraz Kalendarz synchronizujący się na bieżąco z zadaniami</li>
+                                <li>Możliwość głębokiej customizacji</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://linktr.ee/sobigstudio" class="project-link-btn primary" target="_blank">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Linktree
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card scroll-reveal">
+                        <div class="project-img-container">
+                            <img src="./assets/news3.png">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Dart</span>
+                                <span class="tag">Backend</span>
+                            </div>
+                            <h3 class="project-card-title">Aplikacja E-Gazety</h3>
+                            <p class="project-card-desc">
+                                Aplikacja na wczesnym etapie rozwoju. Aplikacja polega na połączeniu tradycyjnych newsów z nowoczesnymi formami tj. TikTok czy też interaktywna mapa ukazująca wydarzenia dziejące się w danym regionie.
+                            </p>
+                            <h4 class="project-features-title">Główne funkcjonalności:</h4>
+                            <ul class="project-features-list">
+                                <li>Rolki wyświetlające najświeższe informacje</li>
+                                <li>Interaktywna mapa pozwalająca wyświetlać co się dzieje obecnie w regionie</li>
+                                <li>System postów oraz wiadomości</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="project-card scroll-reveal">
+                        <div class="project-img-container">
+                            <img src="./assets/ddw.svg">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JS</span>
+                                <span class="tag">Własny system CMS</span>
+                                <span class="tag">Administracja</span>
+                            </div>
+                            <h3 class="project-card-title">Dzień Dobry Włocławek</h3>
+                            <p class="project-card-desc">
+                                Jest to jeden z największych lokalnych portali internetowych we Włocławku. Rozwijałem jego własny system CMS autorstwa <a href="https://siecportali.pl/" style="color: lightblue; text-decoration: underline">siecportali.pl</a>, który napędza również ponad 130 innych portali w całej Polsce.
+                            </p>
+                            <h4 class="project-features-title">Główne funkcjonalności:</h4>
+                            <ul class="project-features-list">
+                                <li>Dynamiczny system sekcji oraz zawartości, które można łatwo przełączać</li>
+                                <li>Posiada kreator UI, który pozwala dostosowywać układ sekcji na portalu</li>
+                                <li>CMS posiada scentralizowaną obsługę wielu portali</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://ddwloclawek.pl/pl/" class="project-link-btn primary" target="_blank">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Link
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card scroll-reveal">
+                        <div class="project-img-container">
+                            <img src="./assets/revive.jpg">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">JS</span>
+                            </div>
+                            <h3 class="project-card-title">Revive AdServer</h3>
+                            <p class="project-card-desc">
+                                Revive AdServer to jeden z najpopularniejszych otwartoźródłowych systemów do serwowania reklam na portalach internetowych. Dokonałem w nim zatwierdzonych kontrybucji, które implementowały filtry banerów
+                            </p>
+                            <h4 class="project-features-title">Główne funkcjonalności:</h4>
+                            <ul class="project-features-list">
+                                <li>Możliwość prowadzenia kampanii reklamowych</li>
+                                <li>Zarządzanie banerami oraz zasobami reklamowymi</li>
+                                <li>Prosta obsługa oraz wdrażanie</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://www.revive-adserver.com/" class="project-link-btn primary" target="_blank">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    Strona projektu
+                                </a>
+                                <a href="https://github.com/revive-adserver/revive-adserver/pull/1561" class="project-link-btn" target="_blank">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                    PR
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Certyfikaty i Szkolenia -->
+        <section class="section certyfikaty-section" id="certyfikaty">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">Certyfikaty &amp; Szkolenia</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="timeline-container">
+                    
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">04.2025 - 05.2025</div>
+                        <div class="timeline-card">
+                            <span class="timeline-tag">Praktyki</span>
+                            <h3 class="timeline-card-title">MICRON PRO</h3>
+                            <p class="timeline-card-desc">
+                                <ul class="timeline-card-list">
+                                    <li>
+                                        Praktyka zawodowa w firmie MICRON PRO obejmowała budowę i testowanie zestawów komputerowych.
+                                    </li>
+                                    <li>
+                                        Naprawa urządzeń elektronicznych oraz diagnozowanie usterek sprzętowych.
+                                    </li>
+                                    <li>
+                                        Wsparcie zespołu technicznego w zakresie konfiguracji sprzętu.
+                                    </li>
+                                    <li>
+                                        Utrzymanie dokumentacji technicznej związanej z wykonywanymi zadaniami
+                                    </li>
+                                    <li>
+                                        Przestrzeganie procedur bezpieczeństwa podczas pracy z urządzeniami elektronicznymi
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">06.2025</div>
+                        <div class="timeline-card">
+                            <span class="timeline-tag">Kwalifikacje</span>
+                            <h3 class="timeline-card-title">Kwalifikacja zawodowa INF.03</h3>
+                            <p class="timeline-card-desc">
+                                Kwalifikacja zawodowa INF.03: "Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych"
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">06.2025</div>
+                        <div class="timeline-card">
+                            <span class="timeline-tag">Projekt</span>
+                            <h3 class="timeline-card-title">Projekt "Dostosowanie Kształcenia Zawodowego do Potrzeb Rynku Pracy"</h3>
+                            <p class="timeline-card-desc">
+                                Udział w projekcie unijnym: "Dostosowanie Kształcenia Zawodowego do Potrzeb Rynku Pracy"
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">07.2025 - 08.2025</div>
+                        <div class="timeline-card">
+                            <span class="timeline-tag">Staż zawodowy</span>
+                            <h3 class="timeline-card-title">Technik Programista - VIVA MEDIA Sp. z o. o. / siecportali.pl</h3>
+                            <p class="timeline-card-desc">
+                                <ul class="timeline-card-list">
+                                    <li>
+                                        Realizowanie zadań programistycznych podczas stażu zawodowego w firmie VIVA MEDIA Sp. z o.o.
+                                    </li>
+                                    <li>
+                                        Administracja i zarządzanie portalami internetowymi obsługującymi ponad 130 redakcji z całej Polski.
+                                    </li>
+                                    <li>
+                                        Współpraca z zespołem w zakresie rozwoju i optymalizacji aplikacji webowych.
+                                    </li>
+                                    <li>
+                                        Testowanie oraz wdrażanie nowych funkcjonalności na platformach internetowych.
+                                    </li>
+                                    <li>
+                                        Utrzymanie wysokiej jakości kodu oraz dokumentowanie zmian w systemie.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">03.2026 - 04.2026</div>
+                        <div class="timeline-card">
+                            <span class="timeline-tag">Certyfikat</span>
+                            <h3 class="timeline-card-title">Programming and operating 3D printing process</h3>
+                            <p class="timeline-card-issuer">Vocational Competence Certificate Foundation</p>
+                            <p class="timeline-card-desc">
+                                Certyfikat ten potwierdza kwalifikacje w zakresie programowania oraz obsługi drukarek 3D m. in.: FDM, SLA, SLS czy też SLM. Jest on uznawany międzynarodowo.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Zainteresowania -->
+        <section class="section zainteresowania-section" id="zainteresowania">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">Zainteresowania</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="interests-grid">
+                    
+                    <div class="interest-card scroll-reveal">
+                        <div class="interest-icon-wrapper">
+                            <i class="fa fa-fire"></i>
+                        </div>
+                        <h3>Piłka nożna</h3>
+                        <p>W weekendy uwielbiam grać w piłkę nożną. Gram ze znajomymi na różnego rodzaju boiskach - najczęściej w klasyczne mecze.</p>
+                    </div>
+
+                    <div class="interest-card scroll-reveal">
+                        <div class="interest-icon-wrapper">
+                            <i class="fa fa-bicycle"></i>
+                        </div>
+                        <h3>Jazda rowerem</h3>
+                        <p>Jeżeli pogoda na to pozwala to z chęcią wybieram się z rodziną lub znajomymi na przeróżne wycieczki rowerowe. Uwielbiam przy okazji robić zdjęcia.</p>
+                    </div>
+
+                    <div class="interest-card scroll-reveal">
+                        <div class="interest-icon-wrapper">
+                            <i class="fa fa-music"></i>
+                        </div>
+                        <h3>Muzyka</h3>
+                        <p>Jako hobby zajmuję się tworzeniem muzyki głównie do różnego rodzaju filmów. Oprócz tego uczę się grać na keyboardzie.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja Kontakt -->
+        <section class="section kontakt-section" id="kontakt">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2 class="section-title">Kontakt</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info scroll-reveal">
+                        <h3>Napisz do mnie!</h3>
+                        <p>Masz pomysł na projekt, ofertę pracy lub chcesz po prostu porozmawiać o technologii? Wypełnij formularz lub skontaktuj się bezpośrednio przez poniższe kanały.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method-item">
+                                <div class="c-icon-box">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </div>
+                                <div class="c-text">
+                                    <span>E-mail</span>
+                                    <a href="mailto:grzegorzsikorski001@gmail.com">grzegorzsikorski001@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method-item">
+                                <div class="c-icon-box">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div class="c-text">
+                                    <span>Lokalizacja</span>
+                                    <strong>Włocławek, Polska / Zdalnie</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com/J0k3RTwelv3" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/grzegorz-sikorski-5a309538a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Grzegorz Sikorski. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <!-- Skrypty JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
